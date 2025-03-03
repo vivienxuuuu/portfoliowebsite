@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivien Xu - Marketing Professional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .bg-gradient {
+            background: linear-gradient(to right, #1e293b, #334155);
+        }
+        .hero-image {
+            background-image: url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #3B82F6;
+            border: 3px solid #EFF6FF;
+        }
+        .timeline-container {
+            border-left: 2px solid #E5E7EB;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans smooth-scroll">
+    <!-- Header and Navigation -->
+    <header class="bg-gradient text-white fixed w-full z-10">
+        <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between">
+                <div class="text-xl font-bold">Vivien Xu</div>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#about" class="hover:text-blue-300 transition">About</a></li>
+                        <li><a href="#experience" class="hover:text-blue-300 transition">Experience</a></li>
+                        <li><a href="#projects" class="hover:text-blue-300 transition">Projects</a></li>
+                        <li><a href="#skills" class="hover:text-blue-300 transition">Skills</a></li>
+                        <li><a href="#contact" class="hover:text-blue-300 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#about" class="block hover:text-blue-300 transition">About</a></li>
+                    <li><a href="#experience" class="block hover:text-blue-300 transition">Experience</a></li>
+                    <li><a href="#projects" class="block hover:text-blue-300 transition">Projects</a></li>
+                    <li><a href="#skills" class="block hover:text-blue-300 transition">Skills</a></li>
+                    <li><a href="#contact" class="block hover:text-blue-300 transition">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="pt-16"></div> <!-- Spacer to account for fixed header -->
+
+    <!-- Hero Section -->
+    <section class="bg-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Vivien Xu</h1>
+                    <h2 class="text-2xl md:text-3xl text-blue-300 mb-6">Marketing & Analytics Professional</h2>
+                    <p class="text-lg mb-8">MSc Marketing student at University of Edinburgh with experience in digital marketing, growth strategies, and data analytics. Passionate about leveraging data to drive marketing decisions and create engaging customer experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </a>
+                        <a href="#projects" class="bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-briefcase mr-2"></i> View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="/api/placeholder/500/500" alt="Vivien Xu" class="rounded-full w-64 h-64 object-cover mx-auto border-4 border-white shadow-lg">
+                </div>
+                <div class="hidden md:flex mt-6 space-x-4 justify-center">
+                    <a href="mailto:s2684748@ed.ac.uk" class="text-blue-300 hover:text-white transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vivien-xu" target="_blank" class="text-blue-300 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        I'm a marketing professional with a passion for data-driven strategies and digital innovation. Currently pursuing my MSc in Marketing at the University of Edinburgh, I bring a strong foundation in quantitative analysis from my BSc in Quantitative Finance from The Hong Kong University of Science and Technology.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        My experience spans across growth marketing at TikTok, ESG consulting at Ernst & Young, and transaction banking at China Construction Bank. I thrive in multicultural environments and have lived and studied in the UK, Hong Kong, and the United States.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        I'm passionate about leveraging data insights to create impactful marketing strategies and am constantly exploring new tools and technologies to enhance digital customer experiences. My strengths include social media analytics, email marketing, audience segmentation, and data visualization.
+                    </p>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Languages</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">English</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Mandarin</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Cantonese</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-6">Education</h3>
+                    <div class="mb-6">
+                        <div class="text-lg font-medium">University of Edinburgh</div>
+                        <div class="text-gray-600">MSc Marketing | 2024 - 2025</div>
+                        <div class="text-sm text-gray-500 mt-1">Consumer Behaviour, Marketing Research & Data Insight, Digital Marketing, Marketing Communications</div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-lg font-medium">The Hong Kong University of Science and Technology</div>
+                        <div class="text-gray-600">BSc Quantitative Finance | 2020 - 2024</div>
+                        <div class="text-sm text-gray-500 mt-1">Academic
