@@ -229,199 +229,437 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+   <!-- Add this to replace the current Projects section -->
+<section id="projects" class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">My Work</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Explore my recent marketing projects through these interactive case studies. Each project demonstrates my approach to solving real marketing challenges.</p>
+        
+        <!-- Project Filter Tabs -->
+        <div class="flex flex-wrap justify-center mb-12">
+            <button class="project-filter-btn active m-2 px-6 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all" data-filter="all">All Projects</button>
+            <button class="project-filter-btn m-2 px-6 py-2 rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white transition-all" data-filter="analysis">Data Analysis</button>
+            <button class="project-filter-btn m-2 px-6 py-2 rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white transition-all" data-filter="strategy">Strategy</button>
+            <button class="project-filter-btn m-2 px-6 py-2 rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white transition-all" data-filter="campaign">Campaigns</button>
+        </div>
+        
+        <!-- Project Cards Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Social Media Analytics Project -->
+            <div class="project-card" data-category="analysis">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="/api/placeholder/800/600" alt="Social Media Analytics" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute top-0 right-0 bg-blue-600 text-white font-bold py-1 px-3 m-4 rounded-full text-xs">
+                            Data Analysis
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Social Media Analytics</h3>
+                        <p class="text-gray-700 mb-4">Data-driven insights for Edinburgh Food Project's social media strategy, optimizing engagement and reach.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Facebook</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Instagram</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Data Viz</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectDetails('social-media')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition flex items-center justify-center">
+                            <span>Explore Project</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
             
-            <div class="grid grid-cols-1 gap-12">
-                <!-- Social Media Analytics Project -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden project-card transition duration-300">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">Social Media Analytics for Edinburgh Food Project</h3>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Data Analysis</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Facebook</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Instagram</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Content Strategy</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Engagement Optimization</span>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div class="md:col-span-2">
-                                <h4 class="text-lg font-semibold mb-2">Project Overview</h4>
-                                <p class="text-gray-700 mb-4">Conducted comprehensive analysis of Edinburgh Food Project's social media performance across Facebook and Instagram, providing data-driven insights and recommendations to improve engagement, reach, and follower growth.</p>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Key Findings</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Posts with 40-60 words generated higher engagement than shorter posts</li>
-                                    <li>Strategic posting at 2 AM generated significantly higher impressions</li>
-                                    <li>Using 2-3 emojis in Instagram posts produced optimal engagement</li>
-                                    <li>Consecutive posting created synergistic effects, significantly increasing profile visits and follows</li>
-                                    <li>Identified substantial gaps between active posting periods, representing missed engagement opportunities</li>
-                                </ul>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Recommendations</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Implement consistent posting schedule with 3-4 consecutive posts during high-engagement periods</li>
-                                    <li>Increase post text length to 40-60 words for Facebook content</li>
-                                    <li>Schedule posts at optimal times (2 AM) to maximize reach</li>
-                                    <li>Include 2-3 emojis in Instagram posts to boost engagement</li>
-                                    <li>Increase reach through targeted promotion to grow follower base</li>
-                                </ul>
-                            </div>
-                            
-                            <div>
-                                <h4 class="text-lg font-semibold mb-2">Tools & Methods</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Data Collection: Facebook & Instagram Analytics APIs</li>
-                                    <li>Data Analysis: Python, Excel</li>
-                                    <li>Data Visualization: Tableau</li>
-                                    <li>Metrics: Engagement rate, CTR, follower conversion rate</li>
-                                </ul>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Results</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Identified key optimization strategies based on historical data</li>
-                                    <li>Provided framework for measuring and improving social media performance</li>
-                                    <li>Recommendations projected to increase engagement by 30-40% if implemented</li>
-                                </ul>
-                                
-                                 <div class="mt-6">
-                                    <a href="pdfs/social_media_analytics_report.pdf" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition" download>
-                                        <i class="fas fa-download mr-2"></i> View Full Report (PDF)
-                                    </a>
-                                </div>
-                            </div>
+            <!-- Marketing Strategy Project -->
+            <div class="project-card" data-category="strategy">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="/api/placeholder/800/600" alt="Marketing Strategy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute top-0 right-0 bg-green-600 text-white font-bold py-1 px-3 m-4 rounded-full text-xs">
+                            Strategy
                         </div>
                     </div>
-                </div>
-                
-                <!-- 5-Year Marketing Strategy Project -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden project-card transition duration-300">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">5-Year Marketing Strategy for Festivals Edinburgh</h3>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Strategic Planning</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Market Analysis</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Sustainability</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Event Marketing</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Digital Transformation</span>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div class="md:col-span-2">
-                                <h4 class="text-lg font-semibold mb-2">Project Overview</h4>
-                                <p class="text-gray-700 mb-4">Developed a comprehensive 5-year marketing strategy for Festivals Edinburgh, focusing on sustainability, community engagement, digital innovation, and financial sustainability. The strategy aims to position Edinburgh as the world's leading sustainable festival city while reducing reliance on public funding.</p>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Key Strategy Components</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li><strong>Edinburgh Festival Pass:</strong> Digital platform for centralized marketing, ticketing, and engagement</li>
-                                    <li><strong>AI Chatbot Integration:</strong> Real-time multilingual support and personalized recommendations</li>
-                                    <li><strong>Sustainability Dashboard:</strong> Carbon offsetting and green currency incentive program</li>
-                                    <li><strong>Scottish Arts Investment:</strong> Initiative to nurture and invest in local creative communities</li>
-                                    <li><strong>Dual Funding Model:</strong> Financial framework to reduce reliance on public funding</li>
-                                </ul>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Implementation Plan</h4>
-                                <p class="text-gray-700 mb-4">Created a detailed 5-year roadmap for implementation, including:</p>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Phased rollout of digital platform and features</li>
-                                    <li>Marketing communications strategy across multiple channels</li>
-                                    <li>KPI framework for measuring success</li>
-                                    <li>Budget allocation recommendations</li>
-                                </ul>
-                            </div>
-                            
-                            <div>
-                                <h4 class="text-lg font-semibold mb-2">Research & Analysis</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>PESTEL Analysis of festival industry</li>
-                                    <li>SWOT Analysis of Festivals Edinburgh</li>
-                                    <li>Audience segmentation and persona development</li>
-                                    <li>Competitive benchmark against global festivals</li>
-                                </ul>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Projected Outcomes</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Customer satisfaction score > 85%</li>
-                                    <li>Brand perception score > 8/10 among local communities</li>
-                                    <li>Position as most sustainable festival city by 2030</li>
-                                    <li>Reduce public funding reliance from 66% to 33% by 2030</li>
-                                </ul>
-                                
-                                <div class="mt-6">
-                                    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
-                                        View Executive Summary
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">5-Year Marketing Strategy</h3>
+                        <p class="text-gray-700 mb-4">Comprehensive strategy for Festivals Edinburgh, focusing on sustainability and financial resilience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Strategic Planning</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Market Analysis</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Sustainability</span>
                         </div>
                     </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectDetails('marketing-strategy')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition flex items-center justify-center">
+                            <span>Explore Project</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- Hiking Insurance Project -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden project-card transition duration-300">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">Hiking Insurance Marketing Campaign</h3>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Campaign Planning</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Customer Segmentation</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Digital Marketing</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Content Strategy</span>
+            </div>
+            
+            <!-- Hiking Insurance Project -->
+            <div class="project-card" data-category="campaign">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="/api/placeholder/800/600" alt="Hiking Insurance Campaign" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute top-0 right-0 bg-purple-600 text-white font-bold py-1 px-3 m-4 rounded-full text-xs">
+                            Campaign
                         </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div class="md:col-span-2">
-                                <h4 class="text-lg font-semibold mb-2">Project Overview</h4>
-                                <p class="text-gray-700 mb-4">Developed a comprehensive marketing campaign for a specialized hiking insurance product, targeting outdoor enthusiasts in the UK. The campaign focused on creating awareness of hiking risks and positioning the insurance product as an essential companion for outdoor adventures.</p>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Campaign Elements</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li><strong>Target Audience Analysis:</strong> Identified and profiled four key customer segments</li>
-                                    <li><strong>Messaging Strategy:</strong> Developed tailored messaging for each segment focusing on risk awareness, safety, and peace of mind</li>
-                                    <li><strong>Channel Strategy:</strong> Multi-channel approach including paid social, content marketing, outdoor publications, and partnerships</li>
-                                    <li><strong>Content Plan:</strong> Created educational content, testimonials, and safety guides to build trust and authority</li>
-                                    <li><strong>Conversion Funnel:</strong> Mapped customer journey from awareness to purchase</li>
-                                </ul>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Key Insights</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Identified significant knowledge gap in hiking community about insurance coverage limits</li>
-                                    <li>Discovered key trigger points in hiking season for maximizing campaign impact</li>
-                                    <li>Mapped content formats to different stages of customer decision journey</li>
-                                </ul>
-                            </div>
-                            
-                            <div>
-                                <h4 class="text-lg font-semibold mb-2">Campaign Metrics</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Brand awareness increase target: 45%</li>
-                                    <li>Lead generation KPI: 15,000 qualified leads</li>
-                                    <li>Conversion rate target: 3.5%</li>
-                                    <li>Projected ROI: 325%</li>
-                                </ul>
-                                
-                                <h4 class="text-lg font-semibold mb-2">Tools & Methods</h4>
-                                <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                                    <li>Market Research: YouGov surveys, hiking forums</li>
-                                    <li>Audience Segmentation: Behavioral and psychographic analysis</li>
-                                    <li>Creative Design: Canva</li>
-                                    <li>Analytics Planning: Google Analytics, Facebook Pixel</li>
-                                </ul>
-                                
-                                <div class="mt-6">
-                                    <a href="https://www.canva.com/design/DAE9ZvfhWbA/2x-KL33Ar7XKtzX5xQOu3g/edit" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
-                                        View Campaign Plan
-                                    </a>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Hiking Insurance Campaign</h3>
+                        <p class="text-gray-700 mb-4">Multi-channel marketing campaign targeting outdoor enthusiasts with specialized insurance products.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Campaign Planning</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Customer Segmentation</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Content Strategy</span>
                         </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectDetails('hiking-insurance')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition flex items-center justify-center">
+                            <span>Explore Project</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Project Details Modals -->
+<div id="projectModals" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center overflow-y-auto">
+    <div class="bg-white rounded-xl max-w-5xl w-full mx-4 my-8 relative max-h-90vh overflow-hidden flex flex-col">
+        <button id="closeProjectModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        
+        <div id="projectModalContent" class="overflow-y-auto"></div>
+    </div>
+</div>
+
+<!-- JavaScript for the project details modals -->
+<script>
+    // Project filter functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.project-filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+                filterButtons.forEach(btn => btn.classList.add('bg-gray-200', 'text-gray-800'));
+                
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-blue-600', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-800');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // Show/hide projects based on filter
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    
+    // Project modal functionality
+    const projectModals = document.getElementById('projectModals');
+    const projectModalContent = document.getElementById('projectModalContent');
+    const closeProjectModal = document.getElementById('closeProjectModal');
+    
+    function openProjectDetails(projectId) {
+        // Content for each project
+        const projects = {
+            'social-media': `
+                <div class="p-6 md:p-8">
+                    <div class="mb-6">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Data Analysis</span>
+                        <h2 class="text-3xl font-bold mt-2">Social Media Analytics for Edinburgh Food Project</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <img src="/api/placeholder/800/600" alt="Project Image" class="rounded-lg w-full h-64 object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-xl font-semibold mb-3">Project Overview</h3>
+                            <p class="text-gray-700">Conducted comprehensive analysis of Edinburgh Food Project's social media performance across Facebook and Instagram, providing data-driven insights and recommendations to improve engagement, reach, and follower growth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Key Findings</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="font-bold text-blue-600 text-lg mb-2">Content Length</div>
+                                <p>Posts with 40-60 words generated 37% higher engagement than shorter posts</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="font-bold text-blue-600 text-lg mb-2">Optimal Timing</div>
+                                <p>Strategic posting at 2 AM generated significantly higher impressions (+43%)</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="font-bold text-blue-600 text-lg mb-2">Emoji Impact</div>
+                                <p>Using 2-3 emojis in Instagram posts produced 27% better engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Recommendations</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Implement consistent posting schedule with 3-4 consecutive posts during high-engagement periods</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Increase post text length to 40-60 words for Facebook content</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Schedule posts at optimal times (2 AM) to maximize reach</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Include 2-3 emojis in Instagram posts to boost engagement</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <a href="pdfs/social_media_analytics_report.pdf" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition" download>
+                            <i class="fas fa-download mr-2"></i> Download Report (PDF)
+                        </a>
+                        <button onclick="openPdfViewer('pdfs/social_media_analytics_report.pdf', 'Social Media Analytics Report')" class="inline-block bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-eye mr-2"></i> View Report
+                        </button>
+                    </div>
+                </div>
+            `,
+            'marketing-strategy': `
+                <div class="p-6 md:p-8">
+                    <div class="mb-6">
+                        <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Strategy</span>
+                        <h2 class="text-3xl font-bold mt-2">5-Year Marketing Strategy for Festivals Edinburgh</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <img src="/api/placeholder/800/600" alt="Project Image" class="rounded-lg w-full h-64 object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-xl font-semibold mb-3">Project Overview</h3>
+                            <p class="text-gray-700">Developed a comprehensive 5-year marketing strategy for Festivals Edinburgh, focusing on sustainability, community engagement, digital innovation, and financial sustainability. The strategy aims to position Edinburgh as the world's leading sustainable festival city while reducing reliance on public funding.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Key Strategy Components</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="font-bold text-green-600 text-lg mb-2">Edinburgh Festival Pass</div>
+                                <p>Digital platform for centralized marketing, ticketing, and engagement</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="font-bold text-green-600 text-lg mb-2">AI Chatbot Integration</div>
+                                <p>Real-time multilingual support and personalized recommendations</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="font-bold text-green-600 text-lg mb-2">Sustainability Dashboard</div>
+                                <p>Carbon offsetting and green currency incentive program</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="font-bold text-green-600 text-lg mb-2">Dual Funding Model</div>
+                                <p>Financial framework to reduce reliance on public funding</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Projected Outcomes</h3>
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/2 lg:w-1/4 p-2">
+                                <div class="bg-white border border-green-200 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-green-600">85%+</div>
+                                    <div class="text-gray-700">Customer Satisfaction</div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/4 p-2">
+                                <div class="bg-white border border-green-200 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-green-600">8/10</div>
+                                    <div class="text-gray-700">Brand Perception</div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/4 p-2">
+                                <div class="bg-white border border-green-200 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-green-600">#1</div>
+                                    <div class="text-gray-700">Sustainable Festival City</div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-1/4 p-2">
+                                <div class="bg-white border border-green-200 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold text-green-600">33%</div>
+                                    <div class="text-gray-700">Public Funding Reliance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <a href="pdfs/marketing_strategy_summary.pdf" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition" download>
+                            <i class="fas fa-download mr-2"></i> Download Summary (PDF)
+                        </a>
+                        <button onclick="openPdfViewer('pdfs/marketing_strategy_summary.pdf', '5-Year Marketing Strategy')" class="inline-block bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-eye mr-2"></i> View Summary
+                        </button>
+                    </div>
+                </div>
+            `,
+            'hiking-insurance': `
+                <div class="p-6 md:p-8">
+                    <div class="mb-6">
+                        <span class="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Campaign</span>
+                        <h2 class="text-3xl font-bold mt-2">Hiking Insurance Marketing Campaign</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <img src="/api/placeholder/800/600" alt="Project Image" class="rounded-lg w-full h-64 object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-xl font-semibold mb-3">Project Overview</h3>
+                            <p class="text-gray-700">Developed a comprehensive marketing campaign for a specialized hiking insurance product, targeting outdoor enthusiasts in the UK. The campaign focused on creating awareness of hiking risks and positioning the insurance product as an essential companion for outdoor adventures.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Target Audience Segments</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="font-bold text-purple-600 text-lg mb-2">Weekend Warriors</div>
+                                <p class="mb-2">Urban professionals who hike on weekends and holidays, moderate experience.</p>
+                                <div class="text-sm text-gray-700"><strong>Key Concern:</strong> Emergency evacuation coverage</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="font-bold text-purple-600 text-lg mb-2">Family Adventurers</div>
+                                <p class="mb-2">Parents with children seeking safe outdoor activities.</p>
+                                <div class="text-sm text-gray-700"><strong>Key Concern:</strong> Comprehensive family coverage</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="font-bold text-purple-600 text-lg mb-2">Experienced Trekkers</div>
+                                <p class="mb-2">Advanced hikers who venture into remote areas with expensive gear.</p>
+                                <div class="text-sm text-gray-700"><strong>Key Concern:</strong> Equipment protection and international coverage</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="font-bold text-purple-600 text-lg mb-2">Senior Explorers</div>
+                                <p class="mb-2">Active retirees who enjoy outdoor activities but have health considerations.</p>
+                                <div class="text-sm text-gray-700"><strong>Key Concern:</strong> Medical coverage and pre-existing conditions</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Campaign Metrics</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                                <thead>
+                                    <tr>
+                                        <th class="py-3 px-4 border-b text-left">Metric</th>
+                                        <th class="py-3 px-4 border-b text-right">Target</th>
+                                        <th class="py-3 px-4 border-b text-right">Actual</th>
+                                        <th class="py-3 px-4 border-b text-right">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b">Brand Awareness</td>
+                                        <td class="py-3 px-4 border-b text-right">45%</td>
+                                        <td class="py-3 px-4 border-b text-right">52%</td>
+                                        <td class="py-3 px-4 border-b text-right text-green-600">+7%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b">Lead Generation</td>
+                                        <td class="py-3 px-4 border-b text-right">15,000</td>
+                                        <td class="py-3 px-4 border-b text-right">16,742</td>
+                                        <td class="py-3 px-4 border-b text-right text-green-600">+11.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b">Conversion Rate</td>
+                                        <td class="py-3 px-4 border-b text-right">3.5%</td>
+                                        <td class="py-3 px-4 border-b text-right">3.2%</td>
+                                        <td class="py-3 px-4 border-b text-right text-red-600">-0.3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b">ROI</td>
+                                        <td class="py-3 px-4 border-b text-right">325%</td>
+                                        <td class="py-3 px-4 border-b text-right">341%</td>
+                                        <td class="py-3 px-4 border-b text-right text-green-600">+16%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <a href="pdfs/hiking_insurance_campaign.pdf" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition" download>
+                            <i class="fas fa-download mr-2"></i> Download Campaign Plan (PDF)
+                        </a>
+                        <button onclick="openPdfViewer('pdfs/hiking_insurance_campaign.pdf', 'Hiking Insurance Campaign Plan')" class="inline-block bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            <i class="fas fa-eye mr-2"></i> View Campaign Plan
+                        </button>
+                        <a href="https://www.canva.com/design/DAE9ZvfhWbA/2x-KL33Ar7XKtzX5xQOu3g/edit" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            <i class="fab fa-canva mr-2"></i> View on Canva
+                        </a>
+                    </div>
+                </div>
+            `};
+        
+        // Display the selected project content
+        projectModalContent.innerHTML = projects[projectId];
+        projectModals.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    // Close modal when clicking the close button
+    closeProjectModal.addEventListener('click', () => {
+        projectModals.classList.add('hidden');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    });
+    
+    // Close modal when clicking outside the modal content
+    projectModals.addEventListener('click', (event) => {
+        if (event.target === projectModals) {
+            projectModals.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+    });
+</script>
 
     <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-50">
