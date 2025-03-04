@@ -41,7 +41,247 @@
         html {
             scroll-behavior: smooth;
         }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 0.5; }
+    }
+    
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-float-delay {
+        animation: float 8s ease-in-out 1s infinite;
+    }
+    
+    .animate-float-delay-2 {
+        animation: float 7s ease-in-out 2s infinite;
+    }
+    
+    .animate-pulse {
+        animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
     </style>
+
+    <style>
+    /* Global animations */
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 0.5; }
+    }
+    
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    
+    /* Animation classes */
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-float-delay {
+        animation: float 8s ease-in-out 1s infinite;
+    }
+    
+    .animate-float-delay-2 {
+        animation: float 7s ease-in-out 2s infinite;
+    }
+    
+    .animate-pulse {
+        animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+    
+    .animate-fade-in-left {
+        animation: fadeInLeft 1s ease-out forwards;
+    }
+    
+    .animate-fade-in-right {
+        animation: fadeInRight 1s ease-out forwards;
+    }
+    
+    /* Animation delays */
+    .delay-100 {
+        animation-delay: 100ms;
+    }
+    
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+    
+    .delay-300 {
+        animation-delay: 300ms;
+    }
+    
+    .delay-400 {
+        animation-delay: 400ms;
+    }
+    
+    .delay-500 {
+        animation-delay: 500ms;
+    }
+    
+    /* Improved scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #3B82F6, #6366F1);
+        border-radius: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #2563EB, #4F46E5);
+    }
+    
+    /* Text selection */
+    ::selection {
+        background-color: rgba(96, 165, 250, 0.3);
+        color: #1E40AF;
+    }
+    
+    /* Improved card hover effects */
+    .hover-card-effect {
+        transition: all 0.3s ease;
+    }
+    
+    .hover-card-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Image hover effects */
+    .img-hover-zoom {
+        overflow: hidden;
+    }
+    
+    .img-hover-zoom img {
+        transition: transform 0.7s ease;
+    }
+    
+    .img-hover-zoom:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* Button animations */
+    .animated-button {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    
+    .animated-button:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        z-index: -2;
+    }
+    
+    .animated-button:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+        z-index: -1;
+    }
+    
+    .animated-button:hover:before {
+        width: 100%;
+    }
+    
+    /* Typography improvements */
+    .heading-gradient {
+        background: linear-gradient(to right, #3B82F6, #6366F1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    /* Loading animation for elements */
+    .shimmer-bg {
+        background: #f6f7f8;
+        background-image: linear-gradient(
+            to right,
+            #f6f7f8 0%,
+            #edeef1 20%,
+            #f6f7f8 40%,
+            #f6f7f8 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 800px 104px;
+        animation: shimmer 1.5s infinite linear;
+    }
+    
+    @keyframes shimmer {
+        0% {
+            background-position: -468px 0;
+        }
+        100% {
+            background-position: 468px 0;
+        }
+    }
+    
+    /* Additional Utilities */
+    .glassmorphism {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+</style>
+    
 </head>
 <body class="bg-gray-50 font-sans smooth-scroll">
     <!-- Header and Navigation -->
@@ -80,36 +320,98 @@
     <div class="pt-16"></div> <!-- Spacer to account for fixed header -->
 
     <!-- Hero Section -->
-    <section class="bg-gradient text-white py-16 md:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Vivien Xu</h1>
-                    <h2 class="text-2xl md:text-3xl text-blue-300 mb-6">Marketing & Analytics Professional</h2>
-                    <p class="text-lg mb-8">MSc Marketing student at University of Edinburgh with experience in digital marketing, growth strategies, and data analytics. Passionate about leveraging data to drive marketing decisions and create engaging customer experiences.</p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
-                            <i class="fas fa-envelope mr-2"></i> Contact Me
+<!-- Replace the current Hero Section with this -->
+<section class="pt-24 pb-16 md:pt-32 md:pb-24 relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <radialGradient id="gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" stop-color="rgba(59, 130, 246, 0.3)" />
+                        <stop offset="100%" stop-color="rgba(59, 130, 246, 0)" />
+                    </radialGradient>
+                </defs>
+                <circle cx="20" cy="20" r="10" fill="url(#gradient)" class="animate-float">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; 5,10; 0,0" dur="20s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="70" cy="30" r="15" fill="url(#gradient)" class="animate-float-delay">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; -10,15; 0,0" dur="25s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="40" cy="60" r="20" fill="url(#gradient)" class="animate-float-delay-2">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; 15,5; 0,0" dur="30s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- Content layer -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div class="lg:col-span-3">
+                <div class="animate-fade-in-up">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">Vivien Xu</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-blue-300 mb-6 font-light">Marketing & Analytics Professional</h2>
+                    <p class="text-lg text-gray-200 mb-8 max-w-2xl">
+                        Data-driven marketing specialist with expertise in digital strategies, growth marketing, and analytics. 
+                        Currently pursuing my MSc in Marketing at University of Edinburgh, 
+                        I combine quantitative analysis with creative storytelling to deliver impactful marketing solutions.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 transform hover:translate-y-1 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-envelope mr-2"></i> Get In Touch
                         </a>
-                        <a href="#projects" class="bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
-                            <i class="fas fa-briefcase mr-2"></i> View Projects
+                        <a href="pdfs/Vivien_Xu_CV.pdf" class="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-medium rounded-lg transition duration-300 transform hover:translate-y-1" download>
+                            <i class="fas fa-file-download mr-2"></i> Download CV
                         </a>
                     </div>
+                    
+                    <div class="mt-8 flex items-center space-x-6">
+                        <a href="mailto:s2684748@ed.ac.uk" class="text-blue-300 hover:text-white transition-colors duration-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vivien-x-0903691b7/" target="_blank" class="text-blue-300 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-gray-300 text-sm">Based in Edinburgh, UK</span>
+                    </div>
                 </div>
-                <div class="hidden md:block">
-                    <img src="images/profile.jpg" alt="Vivien Xu" class="rounded-full w-64 h-64 object-cover mx-auto border-4 border-white shadow-lg mt-8">
-                </div>
-                <div class="hidden md:flex mt-6 space-x-4 justify-center">
-                    <a href="mailto:s2684748@ed.ac.uk" class="text-blue-300 hover:text-white transition">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vivien-x-0903691b7/" target="_blank" class="text-blue-300 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
+            </div>
+            
+            <div class="lg:col-span-2 flex justify-center lg:justify-end animate-fade-in-up">
+                <div class="relative">
+                    <!-- Profile image with animated border -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 blur opacity-70 animate-pulse"></div>
+                    <img src="images/profile.jpg" alt="Vivien Xu" class="relative z-10 rounded-full w-56 h-56 md:w-64 md:h-64 object-cover border-4 border-white shadow-xl">
+                    
+                    <!-- Floating elements -->
+                    <div class="absolute top-0 -right-4 bg-white rounded-lg shadow-lg p-3 transform rotate-12 animate-float">
+                        <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-3 transform -rotate-6 animate-float-delay">
+                        <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 -right-8 bg-white rounded-lg shadow-lg p-3 transform rotate-3 animate-float-delay-2">
+                        <i class="fas fa-bullhorn text-green-600 text-xl"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Animated scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span class="text-gray-300 text-sm mb-2">Explore</span>
+            <a href="#about" class="text-white">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-white">
@@ -163,71 +465,260 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Work Experience</h2>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="relative timeline-container">
-                    <div class="mb-12 ml-8 timeline-item relative">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800">Student Ambassador</h3>
-                                    <h4 class="text-lg text-blue-600">University of Edinburgh</h4>
-                                </div>
-                                <div class="text-sm text-gray-500">Oct 2024 - Present</div>
-                            </div>
-                            <div class="mt-4">
-                                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                    <li>Led engagement webinar sessions for prospective international students, sharing program insights and experiences through presentations and Q&A sessions</li>
-                                    <li>Created digital content across blog posts and social media platforms, developing targeted messaging that effectively increased program visibility</li>
-                                </ul>
-                            </div>
-                        </div>
+    <!-- Replace the current Experience Section with this -->
+<section id="experience" class="py-16 bg-gray-50 relative">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <svg width="100%" height="100%">
+            <pattern id="pattern-circles" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+                <circle id="pattern-circle" cx="20" cy="20" r="3" fill="#4F46E5"></circle>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+        </svg>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl font-bold text-center mb-4">Professional Journey</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-3xl mx-auto">My career path combines marketing expertise with data-driven analysis across diverse industries and organizations.</p>
+        
+        <!-- Timeline Toggle -->
+        <div class="flex justify-center mb-12">
+            <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button type="button" class="timeline-view-btn active px-5 py-3 text-sm font-medium bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:text-blue-700" data-view="cards">
+                    <i class="fas fa-th-large mr-2"></i> Card View
+                </button>
+                <button type="button" class="timeline-view-btn px-5 py-3 text-sm font-medium bg-white border-t border-b border-r border-gray-200 rounded-r-md hover:bg-gray-100 focus:z-10 focus:text-blue-700" data-view="timeline">
+                    <i class="fas fa-stream mr-2"></i> Timeline View
+                </button>
+            </div>
+        </div>
+        
+       <!-- Card View (default) -->
+<div id="cards-view" class="timeline-view active">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Ernst & Young - This should come first chronologically -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="bg-gradient-to-r from-green-500 to-emerald-600 h-3"></div>
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">ESG Consulting</h3>
+                        <div class="text-green-600 font-medium">Ernst & Young</div>
                     </div>
-                    
-                    <div class="mb-12 ml-8 timeline-item relative">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800">Growth Marketing</h3>
-                                    <h4 class="text-lg text-blue-600">TikTok</h4>
-                                </div>
-                                <div class="text-sm text-gray-500">Aug 2023 - Jan 2024</div>
-                            </div>
-                            <div class="mt-4">
-                                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                    <li>Drove a 48% growth in average revenue per advertiser through a series of targeted acquisition, nurturing and resurrection email strategy</li>
-                                    <li>Created themed designs in collaboration with design agencies for email templates and landing page layouts using Figma and Canva</li>
-                                    <li>Utilized reporting platforms and SQL to track and analyze campaign results. Identified and tested optimization strategies using A/B tests, increasing email click-to-open rate from 3% to 11.9%</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Jul 2023 - Aug 2023</span>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Analyzed sustainability performance data and industry trends to develop decarbonization roadmaps and actionable sustainability strategies for clients.</p>
+                
+                <div class="flex gap-3 flex-wrap mb-5">
+                    <span class="bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded">ESG Analysis</span>
+                    <span class="bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded">Decarbonization</span>
+                    <span class="bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded">Benchmarking</span>
+                </div>
+                
+                <button class="experience-details-btn w-full mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-lg transition flex items-center justify-center" data-id="ernst-young">
+                    <span>View Details</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- TikTok - This should come second chronologically -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-3"></div>
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">Growth Marketing</h3>
+                        <div class="text-blue-600 font-medium">TikTok</div>
                     </div>
-                    
-                    <div class="mb-12 ml-8 timeline-item relative">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800">ESG Consulting</h3>
-                                    <h4 class="text-lg text-blue-600">Ernst & Young</h4>
-                                </div>
-                                <div class="text-sm text-gray-500">Jul 2023 - Aug 2023</div>
-                            </div>
-                            <div class="mt-4">
-                                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                    <li>Analyzed annual reports and industry trends to collect key data and insights in clients' operational model and benchmark against other industry peers</li>
-                                    <li>Designed decarbonization roadmaps and strategies based on benchmark analysis and prepared presentation decks</li>
-                                    <li>Conducted trend analysis based on client's past performance data and proposed actionable plans to support clients' sustainability initiatives</li>
-                                </ul>
-                            </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Aug 2023 - Jan 2024</span>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Led strategic email marketing campaigns and data-driven optimization initiatives, achieving substantial growth in advertiser revenue and engagement metrics.</p>
+                
+                <div class="mb-4">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <span class="text-sm font-medium">48% Revenue Growth</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-100">
+                            <div style="width: 48%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="mb-4">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                        <span class="text-sm font-medium">11.9% Email CTOR</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="overflow-hidden h-2 text-xs flex rounded bg-purple-100">
+                            <div style="width: 11.9%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="experience-details-btn w-full mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-lg transition flex items-center justify-center" data-id="tiktok">
+                    <span>View Details</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-    </section>
+        
+        <!-- University of Edinburgh - This should come third chronologically -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="bg-gradient-to-r from-red-500 to-pink-600 h-3"></div>
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">Student Ambassador</h3>
+                        <div class="text-red-600 font-medium">University of Edinburgh</div>
+                    </div>
+                    <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Oct 2024 - Present</span>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Leading engagement webinars and creating targeted digital content to increase program visibility and support prospective international students.</p>
+                
+                <div class="flex items-center mb-5">
+                    <img src="/api/placeholder/30/30" alt="University of Edinburgh" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                        <div class="text-sm font-medium">Business School</div>
+                        <div class="text-xs text-gray-500">MSc Marketing Program</div>
+                    </div>
+                </div>
+                
+                <button class="experience-details-btn w-full mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-lg transition flex items-center justify-center" data-id="uofe">
+                    <span>View Details</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Timeline View (hidden by default) -->
+<div id="timeline-view" class="timeline-view hidden max-w-4xl mx-auto">
+    <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200"></div>
+        
+        <!-- Ernst & Young - This should come first chronologically -->
+        <div class="relative z-10 mb-12">
+            <div class="timeline-bullet absolute left-1/2 transform -translate-x-1/2 -translate-y-4 w-8 h-8 rounded-full bg-green-600 border-4 border-white flex items-center justify-center">
+                <i class="fas fa-leaf text-white text-xs"></i>
+            </div>
+            
+            <div class="timeline-content ml-12 pl-8 w-1/2 md:ml-0 md:pl-0 bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-lg">
+                <div class="absolute right-full top-4 transform translate-x-4 rotate-45 w-4 h-4 bg-white hidden md:block"></div>
+                <div class="md:hidden absolute top-0 left-1/2 transform -translate-x-1/2 -mt-12 text-center">
+                    <div class="bg-green-600 text-white text-xs font-medium px-2.5 py-1 rounded-full">Jul 2023 - Aug 2023</div>
+                </div>
+                
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">ESG Consulting</h3>
+                        <div class="text-green-600 font-medium">Ernst & Young</div>
+                    </div>
+                    <span class="hidden md:inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Jul 2023 - Aug 2023</span>
+                </div>
+                
+                <p class="mt-4 mb-4 text-gray-700">Analyzed annual reports and industry trends to collect key data and insights for creating decarbonization roadmaps and sustainability strategies.</p>
+                
+                <button class="experience-details-btn text-green-600 hover:text-green-800 hover:underline flex items-center text-sm font-medium" data-id="ernst-young">
+                    <span>View Details</span>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- TikTok - This should come second chronologically -->
+        <div class="relative z-10 mb-12">
+            <div class="timeline-bullet absolute left-1/2 transform -translate-x-1/2 -translate-y-4 w-8 h-8 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center">
+                <i class="fab fa-tiktok text-white text-xs"></i>
+            </div>
+            
+            <div class="timeline-content ml-0 md:ml-auto md:mr-12 md:pr-8 md:w-1/2 bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-lg">
+                <div class="absolute left-full top-4 transform -translate-x-4 rotate-45 w-4 h-4 bg-white hidden md:block"></div>
+                <div class="md:hidden absolute top-0 left-1/2 transform -translate-x-1/2 -mt-12 text-center">
+                    <div class="bg-blue-600 text-white text-xs font-medium px-2.5 py-1 rounded-full">Aug 2023 - Jan 2024</div>
+                </div>
+                
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Growth Marketing</h3>
+                        <div class="text-blue-600 font-medium">TikTok</div>
+                    </div>
+                    <span class="hidden md:inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Aug 2023 - Jan 2024</span>
+                </div>
+                
+                <p class="mt-4 mb-4 text-gray-700">Led data-driven email marketing campaigns that increased average revenue per advertiser by 48% and improved email click-to-open rates from 3% to 11.9%.</p>
+                
+                <button class="experience-details-btn text-blue-600 hover:text-blue-800 hover:underline flex items-center text-sm font-medium" data-id="tiktok">
+                    <span>View Details</span>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- University of Edinburgh - This should come third chronologically -->
+        <div class="relative z-10">
+            <div class="timeline-bullet absolute left-1/2 transform -translate-x-1/2 -translate-y-4 w-8 h-8 rounded-full bg-red-600 border-4 border-white flex items-center justify-center">
+                <i class="fas fa-university text-white text-xs"></i>
+            </div>
+            
+            <div class="timeline-content ml-12 pl-8 w-1/2 md:ml-0 md:pl-0 bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-lg">
+                <div class="absolute right-full top-4 transform translate-x-4 rotate-45 w-4 h-4 bg-white hidden md:block"></div>
+                <div class="md:hidden absolute top-0 left-1/2 transform -translate-x-1/2 -mt-12 text-center">
+                    <div class="bg-red-600 text-white text-xs font-medium px-2.5 py-1 rounded-full">Oct 2024 - Present</div>
+                </div>
+                
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">Student Ambassador</h3>
+                        <div class="text-red-600 font-medium">University of Edinburgh</div>
+                    </div>
+                    <span class="hidden md:inline-block bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Oct 2024 - Present</span>
+                </div>
+                
+                <p class="mt-4 mb-4 text-gray-700">Led engagement webinar sessions for prospective international students and created digital content across blog posts and social media platforms.</p>
+                
+                <button class="experience-details-btn text-red-600 hover:text-red-800 hover:underline flex items-center text-sm font-medium" data-id="uofe">
+                    <span>View Details</span>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Experience Details Modal -->
+<div id="experienceModal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center overflow-y-auto">
+    <div class="bg-white rounded-xl max-w-3xl w-full mx-4 my-8 relative">
+        <button id="closeExperienceModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        
+        <div id="experienceModalContent" class="p-6 md:p-8"></div>
+    </div>
+</div>
+
 
    <!-- Projects section -->
 <section id="projects" class="py-16 bg-white">
@@ -249,7 +740,7 @@
             <div class="project-card" data-category="analysis">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
                     <div class="relative overflow-hidden h-60">
-                        <img src="food-project.png" alt="Social Media Analytics" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <img src="images/food-project.png" alt="Social Media Analytics" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                         <div class="absolute top-0 right-0 bg-blue-600 text-white font-bold py-1 px-3 m-4 rounded-full text-xs">
                             Data Analysis
                         </div>
@@ -278,7 +769,7 @@
             <div class="project-card" data-category="strategy">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
                     <div class="relative overflow-hidden h-60">
-                        <img src="festivals-app.png" alt="Marketing Strategy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <img src="images/festivals-app.png" alt="Marketing Strategy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                         <div class="absolute top-0 right-0 bg-green-600 text-white font-bold py-1 px-3 m-4 rounded-full text-xs">
                             Strategy
                         </div>
@@ -307,7 +798,7 @@
             <div class="project-card" data-category="campaign">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
                     <div class="relative overflow-hidden h-60">
-                        <img src="hikare.png" alt="Hiking Insurance Campaign" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <img src="images/hikare.png" alt="Hiking Insurance Campaign" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                         <div class="absolute top-0 right-0 bg-purple-600 text-white font-bold py-1 px-3 m-4 rounded-full text-xs">
                             Campaign
                         </div>
@@ -348,6 +839,611 @@
     </div>
 </div>
 
+
+    <!-- Skills Section -->
+   <section id="skills" class="py-16 bg-gray-50 relative">
+    <!-- Background elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-20 w-32 h-32 bg-blue-400 rounded-full"></div>
+        <div class="absolute bottom-40 right-20 w-48 h-48 bg-green-400 rounded-full"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400 rounded-full"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl font-bold text-center mb-4">My Toolkit</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">I combine marketing expertise with technical skills to create data-driven strategies and engaging customer experiences.</p>
+        
+        <!-- Skills Tabs -->
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8 flex justify-center">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="skills-tab active px-5 py-3 text-sm font-medium bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700" data-category="marketing">
+                        Marketing
+                    </button>
+                    <button type="button" class="skills-tab px-5 py-3 text-sm font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700" data-category="technical">
+                        Technical
+                    </button>
+                    <button type="button" class="skills-tab px-5 py-3 text-sm font-medium bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700" data-category="tools">
+                        Tools
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Skills Content -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <!-- Marketing Skills -->
+                <div id="marketing-skills" class="skills-content active">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-bullhorn text-blue-600 mr-3"></i> Marketing Expertise
+                            </h3>
+                            
+                            <div class="space-y-6">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">Digital Marketing Strategy</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">Content Marketing</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">Email Marketing</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">Social Media Marketing</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-chart-pie text-blue-600 mr-3"></i> Marketing Focus Areas
+                            </h3>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-blue-50 rounded-lg p-4 text-center hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="text-blue-600 text-3xl mb-2">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="font-medium">Audience Segmentation</div>
+                                </div>
+                                
+                                <div class="bg-blue-50 rounded-lg p-4 text-center hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="text-blue-600 text-3xl mb-2">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="font-medium">Growth Marketing</div>
+                                </div>
+                                
+                                <div class="bg-blue-50 rounded-lg p-4 text-center hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="text-blue-600 text-3xl mb-2">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <div class="font-medium">Campaign Management</div>
+                                </div>
+                                
+                                <div class="bg-blue-50 rounded-lg p-4 text-center hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="text-blue-600 text-3xl mb-2">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <div class="font-medium">Brand Storytelling</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills -->
+                <div id="technical-skills" class="skills-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-laptop-code text-blue-600 mr-3"></i> Technical Skills
+                            </h3>
+                            
+                            <div class="space-y-6">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">SQL & Database Querying</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">Python for Data Analysis</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">R for Statistical Analysis</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">HTML & CSS</span>
+                                        <span>65%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-code-branch text-blue-600 mr-3"></i> Technical Projects
+                            </h3>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-green-50 rounded-lg p-4 hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="font-semibold text-green-800">Customer Segmentation Algorithm</div>
+                                    <p class="text-sm text-gray-700">Created a Python script to segment customers based on RFM (Recency, Frequency, Monetary) analysis.</p>
+                                </div>
+                                
+                                <div class="bg-green-50 rounded-lg p-4 hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="font-semibold text-green-800">Email Campaign Performance Dashboard</div>
+                                    <p class="text-sm text-gray-700">Built an interactive dashboard using R and Shiny to visualize email campaign metrics.</p>
+                                </div>
+                                
+                                <div class="bg-green-50 rounded-lg p-4 hover:shadow-md transition-all transform hover:-translate-y-1">
+                                    <div class="font-semibold text-green-800">SQL Stored Procedures for Reporting</div>
+                                    <p class="text-sm text-gray-700">Developed SQL stored procedures to automate marketing performance reports.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools Skills -->
+                <div id="tools-skills" class="skills-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-analytics text-blue-600 mr-3"></i> Analytics Tools
+                            </h3>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Logo_Google_Analytics.svg/1200px-Logo_Google_Analytics.svg.png" alt="Google Analytics" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Google Analytics</div>
+                                        <div class="text-xs text-gray-600">Advanced Certified</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tableau_Software_Logo_Small.svg/1200px-Tableau_Software_Logo_Small.svg.png" alt="Tableau" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Tableau</div>
+                                        <div class="text-xs text-gray-600">Data Visualization</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Power BI</div>
+                                        <div class="text-xs text-gray-600">Dashboard Creation</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-bullhorn text-blue-600 mr-3"></i> Marketing Platforms
+                            </h3>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Hubspot-logo.svg/1200px-Hubspot-logo.svg.png" alt="HubSpot" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">HubSpot</div>
+                                        <div class="text-xs text-gray-600">Marketing Automation</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_ads_logo.svg/1200px-Google_ads_logo.svg.png" alt="Google Ads" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Google Ads</div>
+                                        <div class="text-xs text-gray-600">Search Certified</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mailchimp_logo.svg/1200px-Mailchimp_logo.svg.png" alt="Mailchimp" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Mailchimp</div>
+                                        <div class="text-xs text-gray-600">Email Campaigns</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-paint-brush text-blue-600 mr-3"></i> Design & Content
+                            </h3>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" alt="Figma" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Figma</div>
+                                        <div class="text-xs text-gray-600">UI/UX Design</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/1200px-Canva_icon_2021.svg.png" alt="Canva" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Canva</div>
+                                        <div class="text-xs text-gray-600">Visual Content</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" class="w-8 h-8 mr-3">
+                                    <div>
+                                        <div class="font-medium">Photoshop</div>
+                                        <div class="text-xs text-gray-600">Image Editing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Certifications</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center border-l-4 border-blue-600 transition-transform hover:scale-105">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Google Analytics</div>
+                            <div class="text-sm text-gray-500">Advanced Certification</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center border-l-4 border-blue-600 transition-transform hover:scale-105">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Google Ads</div>
+                            <div class="text-sm text-gray-500">Search Certification</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center border-l-4 border-blue-600 transition-transform hover:scale-105">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">HubSpot Academy</div>
+                            <div class="text-sm text-gray-500">SEO Certification</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Contact Info -->
+                    <div>
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md h-full">
+                            <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-envelope text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Email</h4>
+                                        <a href="mailto:s2684748@ed.ac.uk" class="text-blue-600 hover:underline">s2684748@ed.ac.uk</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-phone text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Phone</h4>
+                                        <a href="tel:+447881949580" class="text-blue-600 hover:underline">(44) 7881949580</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Location</h4>
+                                        <p>Edinburgh, United Kingdom</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fab fa-linkedin text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/vivien-x-0903691b7/" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/vivien-xu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                            <h3 class="text-xl font-bold mb-6">Send Me a Message</h3>
+                            
+                            <form action="https://formspree.io/f/your-formspree-id" method="POST">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Replace current Footer -->
+<footer class="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-12 overflow-hidden">
+    <!-- Animated wave -->
+    <div class="absolute bottom-0 left-0 w-full pointer-events-none">
+        <svg class="w-full h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="rgba(96, 165, 250, 0.4)" />
+                    <stop offset="50%" stop-color="rgba(192, 132, 252, 0.4)" />
+                    <stop offset="100%" stop-color="rgba(96, 165, 250, 0.4)" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#wave-gradient)" fill-opacity="1" d="M0,0 C320,80 640,80 960,40 C1280,0 1440,40 1440,80 L1440,120 L0,120 Z">
+                <animate attributeName="d" 
+                    dur="15s" 
+                    repeatCount="indefinite" 
+                    values="
+                    M0,0 C320,80 640,80 960,40 C1280,0 1440,40 1440,80 L1440,120 L0,120 Z;
+                    M0,0 C320,40 640,40 960,80 C1280,120 1440,80 1440,40 L1440,120 L0,120 Z;
+                    M0,0 C320,60 640,0 960,70 C1280,100 1440,60 1440,30 L1440,120 L0,120 Z;
+                    M0,0 C320,80 640,80 960,40 C1280,0 1440,40 1440,80 L1440,120 L0,120 Z"
+                />
+            </path>
+        </svg>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
+            <!-- Brand -->
+            <div class="md:col-span-4">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold">Vivien Xu</h3>
+                    <p class="text-blue-300">Marketing & Analytics Professional</p>
+                </div>
+                
+                <p class="text-gray-300 mb-6">MSc Marketing student at University of Edinburgh with experience in digital marketing, growth strategies, and data analytics.</p>
+                
+                <a href="pdfs/Vivien_Xu_CV.pdf" download class="inline-flex items-center text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition duration-300">
+                    <i class="fas fa-file-download mr-2"></i> Download CV
+                </a>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="md:col-span-3 md:col-start-6">
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#about" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="md:col-span-3 md:col-start-10">
+                <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-blue-500/20 p-1.5 rounded-full mr-3 mt-1">
+                            <i class="fas fa-envelope text-xs text-blue-300"></i>
+                        </div>
+                        <a href="mailto:s2684748@ed.ac.uk" class="text-gray-300 hover:text-white transition-colors">s2684748@ed.ac.uk</a>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-blue-500/20 p-1.5 rounded-full mr-3 mt-1">
+                            <i class="fas fa-phone text-xs text-blue-300"></i>
+                        </div>
+                        <a href="tel:+447881949580" class="text-gray-300 hover:text-white transition-colors">(44) 7881 949 580</a>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-blue-500/20 p-1.5 rounded-full mr-3 mt-1">
+                            <i class="fas fa-map-marker-alt text-xs text-blue-300"></i>
+                        </div>
+                        <span class="text-gray-300">Edinburgh, United Kingdom</span>
+                    </li>
+                </ul>
+                
+                <div class="mt-4 flex space-x-4">
+                    <a href="https://www.linkedin.com/in/vivien-xu" target="_blank" class="text-blue-300 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom / Copyright -->
+        <div class="pt-8 mt-8 border-t border-blue-800/30 text-center">
+            <p class="text-blue-200 text-sm">&copy; 2025 Vivien Xu. All rights reserved.</p>
+            
+            <!-- Scroll to top button -->
+            <div class="fixed bottom-6 right-6 z-50">
+                <button id="scroll-to-top" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-lg transition-all duration-300 opacity-0 invisible transform translate-y-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll to top button functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                scrollToTopButton.classList.add('opacity-100', 'visible', 'translate-y-0');
+            } else {
+                scrollToTopButton.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                scrollToTopButton.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+        <!-- JavaScript -->
+    
 <!-- JavaScript for the project details modals -->
 <script>
     // Project filter functionality
@@ -660,256 +1756,35 @@
         }
     });
 </script>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Marketing Skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-bullhorn text-blue-600 text-3xl mr-4"></i>
-                        <h3 class="text-xl font-bold">Marketing</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Digital Marketing Strategy
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Content Marketing
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Email Marketing
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Social Media Marketing
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            SEO Fundamentals
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Market Research
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Technical Skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-laptop-code text-blue-600 text-3xl mr-4"></i>
-                        <h3 class="text-xl font-bold">Technical</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            SQL & Database Querying
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Python for Data Analysis
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            R for Statistical Analysis
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            HTML & CSS Fundamentals
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            WordPress
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            VBA for Excel Automation
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Tools & Platforms -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-tools text-blue-600 text-3xl mr-4"></i>
-                        <h3 class="text-xl font-bold">Tools & Platforms</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Google Analytics
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Google Ads
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            HubSpot
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Figma & Canva
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Tableau & Data Visualization
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Microsoft Excel (Advanced)
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Certifications -->
-            <div class="mt-12">
-                <h3 class="text-2xl font-bold text-center mb-6">Certifications</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="bg-white px-4 py-2 rounded-lg shadow-sm flex items-center">
-                        <i class="fas fa-certificate text-blue-600 mr-2"></i>
-                        <span>Google Analytics Advanced</span>
-                    </div>
-                    <div class="bg-white px-4 py-2 rounded-lg shadow-sm flex items-center">
-                        <i class="fas fa-certificate text-blue-600 mr-2"></i>
-                        <span>Google Ads Search</span>
-                    </div>
-                    <div class="bg-white px-4 py-2 rounded-lg shadow-sm flex items-center">
-                        <i class="fas fa-certificate text-blue-600 mr-2"></i>
-                        <span>HubSpot Academy SEO</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Contact Info -->
-                    <div>
-                        <div class="bg-gray-100 p-6 rounded-lg shadow-md h-full">
-                            <h3 class="text-xl font-bold mb-6">Contact Information</h3>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                        <i class="fas fa-envelope text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium">Email</h4>
-                                        <a href="mailto:s2684748@ed.ac.uk" class="text-blue-600 hover:underline">s2684748@ed.ac.uk</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                        <i class="fas fa-phone text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium">Phone</h4>
-                                        <a href="tel:+447881949580" class="text-blue-600 hover:underline">(44) 7881949580</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                        <i class="fas fa-map-marker-alt text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium">Location</h4>
-                                        <p>Edinburgh, United Kingdom</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                        <i class="fab fa-linkedin text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium">LinkedIn</h4>
-                                        <a href="https://www.linkedin.com/in/vivien-x-0903691b7/" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/vivien-xu</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Form -->
-                    <div>
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                            <h3 class="text-xl font-bold mb-6">Send Me a Message</h3>
-                            
-                            <form action="https://formspree.io/f/your-formspree-id" method="POST">
-                                <div class="mb-4">
-                                    <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                </div>
-                                
-                                <div class="mb-4">
-                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                </div>
-                                
-                                <div class="mb-4">
-                                    <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                </div>
-                                
-                                <div class="mb-6">
-                                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                                </div>
-                                
-                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gradient text-white py-8">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">Vivien Xu</p>
-                    <p class="text-blue-300">Marketing & Analytics Professional</p>
-                </div>
-                
-                <div class="flex space-x-6">
-                    <a href="mailto:s2684748@ed.ac.uk" class="text-white hover:text-blue-300 transition">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vivien-x-0903691b7/" target="_blank" class="text-white hover:text-blue-300 transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="mt-6 text-center text-sm text-blue-200">
-                <p>&copy; 2025 Vivien Xu. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-        <!-- JavaScript -->
     <script>
+            // Skills Tab Functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const skillsTabs = document.querySelectorAll('.skills-tab');
+        const skillsContents = document.querySelectorAll('.skills-content');
+        
+        skillsTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                skillsTabs.forEach(t => t.classList.remove('active', 'bg-blue-50', 'text-blue-700'));
+                skillsTabs.forEach(t => t.classList.add('bg-white'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active', 'bg-blue-50', 'text-blue-700');
+                tab.classList.remove('bg-white');
+                
+                // Hide all content sections
+                skillsContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                // Show the corresponding content
+                const category = tab.getAttribute('data-category');
+                document.getElementById(`${category}-skills`).classList.remove('hidden');
+                document.getElementById(`${category}-skills`).classList.add('active');
+            });
+        });
+    });
         // Mobile Menu Toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -923,5 +1798,334 @@
             });
         });
     </script>
+
+<!-- Add this to your existing JavaScript section -->
+<script>
+    // Timeline View Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+        const viewButtons = document.querySelectorAll('.timeline-view-btn');
+        const views = document.querySelectorAll('.timeline-view');
+        
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                viewButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-50', 'text-blue-700'));
+                
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-blue-50', 'text-blue-700');
+                
+                // Hide all views
+                views.forEach(view => {
+                    view.classList.add('hidden');
+                    view.classList.remove('active');
+                });
+                
+                // Show the corresponding view
+                const viewType = button.getAttribute('data-view');
+                document.getElementById(`${viewType}-view`).classList.remove('hidden');
+                document.getElementById(`${viewType}-view`).classList.add('active');
+            });
+        });
+    });
+    
+    // Experience Details Modal
+    const experienceModal = document.getElementById('experienceModal');
+    const experienceModalContent = document.getElementById('experienceModalContent');
+    const closeExperienceModal = document.getElementById('closeExperienceModal');
+    
+    // Content for each experience
+    const experienceDetails = {
+        'tiktok': `
+            <div>
+                <div class="mb-6 pb-6 border-b">
+                    <div class="flex items-center mb-4">
+                        <img src="/api/placeholder/50/50" alt="TikTok" class="w-12 h-12 rounded-lg mr-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Growth Marketing</h3>
+                            <div class="text-blue-600 font-medium">TikTok</div>
+                            <div class="text-sm text-gray-500">Aug 2023 - Jan 2024 · 6 months</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">Worked on the Global Business Marketing team to drive advertiser growth through targeted email marketing strategies, data analysis, and campaign optimization.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Key Achievements</h4>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">48% Revenue Growth</div>
+                                <p class="text-gray-600 text-sm">Drove a 48% growth in average revenue per advertiser through targeted acquisition, nurturing and resurrection email campaigns.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-envelope-open-text text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Email Performance Optimization</div>
+                                <p class="text-gray-600 text-sm">Increased email click-to-open rate from 3% to 11.9% using A/B testing methodologies and data-driven optimization.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-palette text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Design Collaboration</div>
+                                <p class="text-gray-600 text-sm">Created themed designs with design agencies for email templates and landing page layouts using Figma and Canva.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Tools & Technologies</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">SQL</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Marketing Analytics</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">A/B Testing</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Figma</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Canva</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Email Marketing</span>
+                    </div>
+                </div>
+            </div>
+        `,
+        'ernst-young': `
+            <div>
+                <div class="mb-6 pb-6 border-b">
+                    <div class="flex items-center mb-4">
+                        <img src="/api/placeholder/50/50" alt="Ernst & Young" class="w-12 h-12 rounded-lg mr-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">ESG Consulting</h3>
+                            <div class="text-green-600 font-medium">Ernst & Young</div>
+                            <div class="text-sm text-gray-500">Jul 2023 - Aug 2023 · 2 months</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">Supported the sustainability consulting team in developing decarbonization strategies and ESG performance analysis for corporate clients.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Project Highlights</h4>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-search text-green-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Industry Analysis</div>
+                                <p class="text-gray-600 text-sm">Analyzed annual reports and industry trends to collect key data and insights on clients' operational models and benchmark against industry peers.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-route text-green-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Decarbonization Roadmaps</div>
+                                <p class="text-gray-600 text-sm">Designed decarbonization roadmaps and strategies based on benchmark analysis and prepared presentation decks for client meetings.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-bar text-green-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Performance Analysis</div>
+                                <p class="text-gray-600 text-sm">Conducted trend analysis based on clients' past performance data and proposed actionable plans to support sustainability initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Skills Applied</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">ESG Analysis</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Data Visualization</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Benchmarking</span>
+                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Sustainability Strategy</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Excel</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">PowerPoint</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Client Presentations</span>
+                    </div>
+                </div>
+            </div>
+        `,
+        'uofe': `
+            <div>
+                <div class="mb-6 pb-6 border-b">
+                    <div class="flex items-center mb-4">
+                        <img src="/api/placeholder/50/50" alt="University of Edinburgh" class="w-12 h-12 rounded-lg mr-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Student Ambassador</h3>
+                            <div class="text-red-600 font-medium">University of Edinburgh</div>
+                            <div class="text-sm text-gray-500">Oct 2024 - Present</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">Representing the Business School's MSc Marketing program to prospective students and creating content to showcase the program and student experience.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Responsibilities</h4>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-video text-red-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Webinar Hosting</div>
+                                <p class="text-gray-600 text-sm">Led engagement webinar sessions for prospective international students, sharing program insights and experiences through presentations and Q&A sessions.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-edit text-red-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Content Creation</div>
+                                <p class="text-gray-600 text-sm">Created digital content across blog posts and social media platforms, developing targeted messaging that effectively increased program visibility.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-users text-red-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium">Student Support</div>
+                                <p class="text-gray-600 text-sm">Provided guidance and mentorship to prospective students, helping them navigate the application process and transition to university life in Edinburgh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Impact Areas</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Digital Marketing</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Content Creation</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Public Speaking</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Presentation Skills</span>
+                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded">Community Building</span>
+                    </div>
+                </div>
+            </div>
+        `
+    };
+    
+    // Open experience modal
+    document.addEventListener('DOMContentLoaded', () => {
+        const experienceButtons = document.querySelectorAll('.experience-details-btn');
+        
+        experienceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const experienceId = button.getAttribute('data-id');
+                experienceModalContent.innerHTML = experienceDetails[experienceId];
+                experienceModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+    });
+    
+    // Close experience modal
+    closeExperienceModal.addEventListener('click', () => {
+        experienceModal.classList.add('hidden');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    });
+    
+    // Close modal when clicking outside the modal content
+    experienceModal.addEventListener('click', (event) => {
+        if (event.target === experienceModal) {
+            experienceModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+    });
+</script>
+<script>
+    // Intersection Observer for scroll animations
+    document.addEventListener("DOMContentLoaded", function() {
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the animation class based on data attribute
+                    const animation = entry.target.dataset.animation || 'animate-fade-in-up';
+                    entry.target.classList.add(animation);
+                    
+                    // Unobserve after animation is added
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: '0px 0px -50px 0px' // Adjust when the animation triggers
+        });
+        
+        // Observe all elements with .scroll-animate class
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+    
+    // Add "active" class to navigation links based on scroll position
+    function setActiveNavItem() {
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('header nav a');
+        
+        const scrollPosition = window.scrollY + 100; // Adding offset to account for fixed header
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navItems.forEach(item => {
+                    item.classList.remove('text-blue-300');
+                    if (item.getAttribute('href') === '#' + sectionId) {
+                        item.classList.add('text-blue-300');
+                    }
+                });
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', setActiveNavItem);
+    window.addEventListener('load', setActiveNavItem);
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip if href is just "#"
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Account for fixed header offset
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // If mobile menu is open, close it
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+    });
+</script> 
 </body>
 </html>
